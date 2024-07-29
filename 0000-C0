@@ -1,0 +1,16 @@
+line="Naljnl, Pnrfne jnf n fxvyyrq pbzzhavpngbe, naq ur hfrq n inevrgl bs zrgubqf gb xrrc uvf zrffntrf frperg sebz uvf rarzvrf. Bar bs gurfr zrgubqf jnf gur Pnrfne pvcure, n fvzcyr grpuavdhr gb boshfpngr pbzzhavpngvbaf. SYNT{ebgngr_gung_nycunorg}"
+lst=[]
+val=-13
+for char in line:
+    if (ord(char) in range(65-(val),(91))) | (ord(char) in range(97-(val),(123))):
+        lst.append(chr(ord(char)+val))
+    elif (ord(char) in range(65, (65-(val)))):
+        lst.append(chr(90-(65-ord(char)-val)+1))
+    elif (ord(char) in range(97, (97-(val)))):
+        lst.append(chr(122-(97-ord(char)-val)+1))
+    else:
+        lst.append(char)
+    
+        
+result = ' '.join(lst)
+print(result)
